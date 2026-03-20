@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <title>Daily Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <h1>Daily Store</h1>
+            </div>
+            <div class="search-products">
+                <select id="all">
+                    <option>Thời trang nam</option>
+                    <option>Thời trang nữ</option>
+                    <option>Quần áo</option>
+                    <option>Sản phẩm khuyến mãi</option>
+                    <option>Giày dép</option>
+                    <option>Phụ kiện</option>
+                </select>
+                <input type="text" id="input" placeholder="Tìm kiếm sản phẩm bạn mong muốn">
+                <button id="search"><img
+                        src="png-clipart-computer-icons-pittsburg-button-search-box-button-eps-rim-removebg-preview.png"
+                        alt="search"></button>
+            </div>
+            <div class="shopping-cart">
+                <img src="pngtree-cart-plain-shoping-trolly-icon-vector-illustration-for-web-png-image_1927620-removebg-preview.png"
+                    alt="cart">
+                <span id="cart-count">0</span>
+            </div>
+            <div class="account">
+                <span class="register"><a href="#">Đăng ký</a></span>
+                <span>/</span>
+                <span class="login"><a href="#">Đăng nhập</a></span>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <nav>
+                <ul class="choose">
+                    <li><a href="#">Trang chủ</a></li>
+                    <li class="drop-down">
+                        <a href="#">Thời trang nam</a>
+                        <ul class="menu">
+                            <li><a href="#">Sơ mi nam</a></li>
+                            <li><a href="#">Quần âu nam</a></li>
+                            <li><a href="#">Quần short nam</a></li>
+                        </ul>
+                    </li>
+                    <li class="drop-down">
+                        <a href="#">Thời trang nữ</a>
+                        <ul class="menu">
+                            <li><a href="#">Đầm</a></li>
+                            <li><a href="#">Chân váy</a></li>
+                            <li><a href="#">Áo phông nữ</a></li>
+                        </ul>
+                    </li>
+                    <li class="drop-down">
+                        <a href="#">Sản phẩm</a>
+                        <ul class="menu">
+                            <li><a href="#">Sản phẩm khuyến mãi</a></li>
+                            <li><a href="#">Sản phẩm hot trend</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Phụ kiện</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <p id="hotline">
+            <pre>           |          Hotline: 1900 1981</pre>
+            </p>
+        </div>
+    </header>
+    <section class="banner">
+        <div class="slider">
+            <div class="slides">
+                <img src="slider_1.webp">
+                <img src="slider_2.webp">
+            </div>
+
+            <button id="prev">←</button>
+            <button id="next">→</button>
+        </div>
+    </section>
+    <hr>
+    <section class="products-nav">
+        <div class="section-top">
+            <h1>SẢN PHẨM HOT TREND</h1>
+            <div class="product-type">
+                <button class="classify1">Quần áo</button>
+                <button class="classify1">Phụ kiện</button>
+                <button class="classify1">Giày dép</button>
+            </div>
+            <div class="filter-price">
+                <input type="number" id="priceInput" placeholder="Nhập giá tối đa">
+                <button onclick="filterByPrice()">Lọc</button>
+            </div>
+            <div class="sort">
+                <span>Giá <button id="ascending">↑</button>
+                    <button id="descending">↓</button></span>
+            </div>
+            
+        </div>
+        <div class="product-container"></div>
+    </section>
+    <section class="products-nav">
+        <div class="section-bottom">
+            <h1>SẢN PHẨM KHUYẾN MÃI</h1>
+            <div class="product-type">
+                <button class="classify2">Quần áo</button>
+                <button class="classify2">Phụ kiện</button>
+                <button class="classify2">Giày dép</button>
+            </div>
+            <div class="filter-price">
+                <input type="number" id="priceInput" placeholder="Nhập giá tối đa">
+                <button onclick="filterByPrice()">Lọc</button>
+            </div>
+            <div class="sort">
+                <span>Giá <button id="ascending">↑</button>
+                    <button id="descending">↓</button></span>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
