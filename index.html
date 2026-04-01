@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Daily Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,14 +25,6 @@
                 <h1>Daily Store</h1>
             </div>
             <div class="search-products">
-                <select id="all">
-                    <option>Thời trang nam</option>
-                    <option>Thời trang nữ</option>
-                    <option>Quần áo</option>
-                    <option>Sản phẩm khuyến mãi</option>
-                    <option>Giày dép</option>
-                    <option>Phụ kiện</option>
-                </select>
                 <input type="text" id="input" placeholder="Tìm kiếm sản phẩm bạn mong muốn">
                 <button id="search"><img
                         src="png-clipart-computer-icons-pittsburg-button-search-box-button-eps-rim-removebg-preview.png"
@@ -51,37 +44,24 @@
         <div class="header-bottom">
             <nav>
                 <ul class="choose">
-                    <li><a href="#">Trang chủ</a></li>
-                    <li class="drop-down">
-                        <a href="#">Thời trang nam</a>
-                        <ul class="menu">
-                            <li><a href="#">Sơ mi nam</a></li>
-                            <li><a href="#">Quần âu nam</a></li>
-                            <li><a href="#">Quần short nam</a></li>
-                        </ul>
-                    </li>
-                    <li class="drop-down">
-                        <a href="#">Thời trang nữ</a>
-                        <ul class="menu">
-                            <li><a href="#">Đầm</a></li>
-                            <li><a href="#">Chân váy</a></li>
-                            <li><a href="#">Áo phông nữ</a></li>
-                        </ul>
-                    </li>
+
+                    <li><a href="#all-products-section" id="all-products-link">Tất cả</a></li>
+                    <li><a href="#" id="clothes-main">Quần áo</a></li>
+                    <li><a href="#" id="shoes-main">Giày dép</a></li>
+                    <li><a href="#" id="accessory-main">Phụ kiện</a></li>
                     <li class="drop-down">
                         <a href="#">Sản phẩm</a>
                         <ul class="menu">
-                            <li><a href="#">Sản phẩm khuyến mãi</a></li>
-                            <li><a href="#">Sản phẩm hot trend</a></li>
+                            <li><a href="sale.html">Sản phẩm khuyến mãi</a></li>
+                            <li><a href="hot.html">Sản phẩm hot trend</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Phụ kiện</a></li>
-                    <li><a href="#">Tin tức</a></li>
+
                     <li><a href="#">Liên hệ</a></li>
                 </ul>
             </nav>
             <p id="hotline">
-            <pre>           |          Hotline: 1900 1981</pre>
+                Hotline: 1900 1981
             </p>
         </div>
     </header>
@@ -96,45 +76,110 @@
             <button id="next">→</button>
         </div>
     </section>
-    <hr>
-    <section class="products-nav">
+    <section class="products-nav" id="all-products-section">
         <div class="section-top">
-            <h1>SẢN PHẨM HOT TREND</h1>
+            <h1>TẤT CẢ SẢN PHẨM</h1>
+
+
             <div class="product-type">
-                <button class="classify1">Quần áo</button>
-                <button class="classify1">Phụ kiện</button>
-                <button class="classify1">Giày dép</button>
+                <button class="classify3 active" id="all-product3">Tất cả</button>
+                <button class="classify3" id="clothes3">Quần áo</button>
+                <button class="classify3" id="accessory3">Phụ kiện</button>
+                <button class="classify3" id="shoes3">Giày dép</button>
             </div>
+
             <div class="filter-price">
-                <input type="number" id="priceInput" placeholder="Nhập giá tối đa">
-                <button onclick="filterByPrice()">Lọc</button>
+                <input type="number" id="minPrice3" placeholder="Từ">
+                <input type="number" id="maxPrice3" placeholder="Đến">
+                <button id="filter3">Lọc</button>
             </div>
+
+
             <div class="sort">
-                <span>Giá <button id="ascending">↑</button>
-                    <button id="descending">↓</button></span>
-            </div>
-            
-        </div>
-        <div class="product-container"></div>
-    </section>
-    <section class="products-nav">
-        <div class="section-bottom">
-            <h1>SẢN PHẨM KHUYẾN MÃI</h1>
-            <div class="product-type">
-                <button class="classify2">Quần áo</button>
-                <button class="classify2">Phụ kiện</button>
-                <button class="classify2">Giày dép</button>
-            </div>
-            <div class="filter-price">
-                <input type="number" id="priceInput" placeholder="Nhập giá tối đa">
-                <button onclick="filterByPrice()">Lọc</button>
-            </div>
-            <div class="sort">
-                <span>Giá <button id="ascending">↑</button>
-                    <button id="descending">↓</button></span>
+                <span>Giá
+                    <button id="all-ascending">↑</button>
+                    <button id="all-descending">↓</button>
+                </span>
             </div>
         </div>
+
+
+        <div class="product-container" id="container-all"></div>
     </section>
+
+    <div class="overlay">
+        <div class="shoppingcart-list">
+            <div class="info">
+                <p id="s1">Sản phẩm</p>
+                <p id="name">Tên</p>
+                <p id="s3">Đơn giá</p>
+                <p id="s2">Số lượng</p>
+                <p id="s4">Thành tiền</p>
+                <p id="s5">Thao tác</p>
+            </div>
+            <div class="order-list">
+                <div id="cart-items"></div>
+            </div>
+            <button id="exit">X</button>
+        </div>
+
+    </div>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+
+                <div class="footer-col">
+                    <h2 class="footer-logo">Daily Store</h2>
+                    <p>Cửa hàng thời trang nam nữ hiện đại.<br>
+                        Mang đến những sản phẩm chất lượng với giá tốt nhất.</p>
+                </div>
+
+
+                <div class="footer-col">
+                    <h3>Liên kết nhanh</h3>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="#">Tất cả sản phẩm</a></li>
+                        <li><a href="hot.html">Hot Trend</a></li>
+                        <li><a href="sale.html">Khuyến mãi</a></li>
+                        <li><a href="#">Quần áo</a></li>
+                        <li><a href="#">Giày dép</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Hỗ trợ khách hàng</h3>
+                    <ul>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Chính sách vận chuyển</a></li>
+                        <li><a href="#">Hướng dẫn mua hàng</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Liên hệ</h3>
+                    <p><strong>Hotline:</strong> 1900 1981</p>
+                    <p><strong>Email:</strong> support@daily.store</p>
+                    <p><strong>Địa chỉ:</strong> 123 Đường ABC, Quận 1, TP. Hồ Chí Minh</p>
+
+                    <div class="social-icons">
+                        <a href="#">📘</a>
+                        <a href="#">📷</a>
+                        <a href="#">🐦</a>
+                        <a href="#">▶️</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Daily Store. All rights reserved.</p>
+                <p>Thiết kế bởi <strong>Đức Quang</strong></p>
+            </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 

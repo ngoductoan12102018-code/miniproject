@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <title>Khuyến mãi</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<header>
+    <nav>
+        <a href="index.html">Trang chủ</a> >
+        <a href="sale.html">Khuyến mãi</a>
+    </nav>
+</header>
+
+<body>
+    <section class="products-nav">
+        <div class="section-bottom">
+            <h1>SẢN PHẨM KHUYẾN MÃI</h1>
+            <div class="product-type">
+                <button class="classify2" id="all-product2">Tất cả</button>
+                <button class="classify2" id="clothes2">Quần áo</button>
+                <button class="classify2" id="accessory2">Phụ kiện</button>
+                <button class="classify2" id="shoes2">Giày dép</button>
+            </div>
+            <div class="filter-price">
+                <input type="number" id="minPrice2" placeholder="Từ">
+                <input type="number" id="maxPrice2" placeholder="Đến">
+                <button id="filter2" onclick="filterByPriceSale()">Lọc</button>
+            </div>
+            <div class="sort">
+                <span>Giá <button id="ascending2">↑</button>
+                    <button id="descending2">↓</button></span>
+            </div>
+
+        </div>
+        <div class="product-container2"></div>
+    </section>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
